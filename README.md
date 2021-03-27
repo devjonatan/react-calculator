@@ -1,1 +1,1 @@
-# react-calculator
+# React Calculator by Dev Jonatan
