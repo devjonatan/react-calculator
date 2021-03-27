@@ -6,7 +6,7 @@ import "./style.css";
 class Calculadora extends Component {
 	render() {
 		return (
-			<section>
+			<section className="calculadora">
 				<Painel />
 				<Teclado />
 			</section>
