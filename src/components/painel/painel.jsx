@@ -4,7 +4,7 @@ import "./style.css";
 class Painel extends Component {
 	render() {
 		return (
-			<div>Painel aqui!</div>
+			<div className="painelDigital">Painel aqui!</div>
 		)
 	}
 }
