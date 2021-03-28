@@ -14,6 +14,10 @@ class Calculadora extends Component {
 	}
 
 	handleInserirCaractereDigitado(caractere) {
+		const estadoAnterior = this.state.informacoesDigitadas;
+		if (estadoAnterior.indexOf("OPERAÇÃO") > -1)
+			this.imprimirNaTela("");
+
 		let novoEstado = this.state.informacoesDigitadas + caractere;
 
 		if (caractere === "C")
@@ -63,6 +67,9 @@ class Calculadora extends Component {
 			case "*":
 				resultado = primeiroNumero * segundoNumero;
 				break;
+
+			default:
+				throw ("Operador não definido!");
 		}
 
 		resultado = resultado.toString().replace(".", ",");
