@@ -8,7 +8,7 @@ class Teclado extends Component {
 
 		this.teclas = [];
 
-		const teclas = "123+456-789/.0,*=";
+		const teclas = "123+456-789/.0,*=C";
 		for (let indice = 0; indice < teclas.length; indice++) {
 			const tecla = teclas[indice];
 			this.teclas.push(tecla);
