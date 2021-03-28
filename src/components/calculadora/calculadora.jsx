@@ -14,11 +14,9 @@ class Calculadora extends Component {
 	}
 
 	handleInserirCaractereDigitado(caractere) {
-		const estadoAnterior = this.state.informacoesDigitadas;
-		if (estadoAnterior.indexOf("OPERAÇÃO") > -1)
-			this.imprimirNaTela("");
-
 		let novoEstado = this.state.informacoesDigitadas + caractere;
+		if (novoEstado.indexOf("ERRO") > -1)
+			novoEstado = caractere;
 
 		if (caractere === "C")
 			novoEstado = "";
@@ -39,7 +37,7 @@ class Calculadora extends Component {
 			const resultado = this.executarCalculo(args[0], args[1]);
 			this.imprimirNaTela(resultado);
 		} catch (error) {
-			this.imprimirNaTela("OPERAÇÃO INVÁLIDA");
+			this.imprimirNaTela("ERRO");
 			console.log(error);
 		}
 	}
@@ -74,7 +72,7 @@ class Calculadora extends Component {
 
 		resultado = resultado.toString().replace(".", ",");
 
-		if (resultado === "NaN")
+		if (resultado === "NaN" || resultado === "Infinity")
 			throw ("Resultado resultou em número inválido!");
 
 		return resultado;
