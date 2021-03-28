@@ -5,7 +5,7 @@ class Painel extends Component {
 	render() {
 		return (
 			<div className="painelDigital">
-				<span>345.0+455.44</span>
+				<span>{this.props.textoParaExibicao}</span>
 			</div>
 		)
 	}

@@ -3,8 +3,8 @@ import "./style.css";
 
 class Teclado extends Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.teclas = [];
 
@@ -15,12 +15,16 @@ class Teclado extends Component {
 		}
 	}
 
+	handleInserirCaractereDigitado(tecla) {
+		this.props.inserirCaractereDigitado(tecla);
+	}
+
 	render() {
 		return (
 			<div className="teclado">
 				{this.teclas.map((tecla, index) => {
 					return (
-						<button className="button" key={index}>
+						<button value={tecla} onClick={() => this.handleInserirCaractereDigitado(tecla)} className="button" key={index}>
 							<div className="button__content">
 								<p className="button__text">{tecla}</p>
 							</div>
