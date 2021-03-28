@@ -65,7 +65,12 @@ class Calculadora extends Component {
 				break;
 		}
 
-		return resultado.toString().replace(".", ",");
+		resultado = resultado.toString().replace(".", ",");
+
+		if (resultado === "NaN")
+			throw ("Resultado resultou em número inválido!");
+
+		return resultado;
 	}
 
 	imprimirNaTela(texto) {
