@@ -1,3 +1,6 @@
 .calculadora {
-	width: 500px;
+	width: 510px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 10px;
 }

@@ -1,3 +1,12 @@
 .painelDigital {
 	font-family: 'digital-7', sans-serif;
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 25px;
+	background-color: black;
+	height: 65px;
+	padding: 15px;
+	border-radius: 10px;
+	color: #b1faa7;
+	font-weight: bold;
 }
